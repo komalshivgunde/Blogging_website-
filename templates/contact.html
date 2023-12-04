@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'main' %}
+      
+    <h2 style="text-align:center">Our Team</h2>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+                <img src="{% static 'asset/images/image1.jfif' %}" alt="Jane" class="card-img-top">
+                <div class="card-body">
+                    <h2>Komal Shivgunde</h2>
+                    <p class="card-title">CEO & Founder</p>
+                    <p class="card-text">Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p class="card-text">jane@example.com</p>
+                    <p><button class="btn btn-primary">Contact</button></p>
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+                <img src="{% static 'asset/images/image1.jfif' %}" alt="Mike" class="card-img-top">
+                <div class="card-body">
+                    <h2>Mike Ross</h2>
+                    <p class="card-title">Art Director</p>
+                    <p class="card-text">Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p class="card-text">mike@example.com</p>
+                    <p><button class="btn btn-primary">Contact</button></p>
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+                <img src="{% static 'asset/images/image1.jfif' %}" alt="John" class="card-img-top">
+                <div class="card-body">
+                    <h2>John Doe</h2>
+                    <p class="card-title">Designer</p>
+                    <p class="card-text">Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p class="card-text">john@example.com</p>
+                    <p><button class="btn btn-primary">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

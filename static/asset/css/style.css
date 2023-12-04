@@ -1,0 +1,21 @@
+
+
+.anchor{
+    text-decoration : none;
+}
+
+.cover{
+    object-fit:cover;
+    object-position: center;
+}
+
+.about {
+    background-color: #b3b5b3;
+}
+
+.komal {
+
+    color: gold;
+    font-family: Drama Regular;
+    font-size: 4rem;
+}

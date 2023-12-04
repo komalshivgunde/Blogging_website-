@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'main' %}
+
+    <div class="row row" style="background-color: #f4f1f1;" >
+        
+        <div class="col-md-5">
+            <img src="{% static 'asset/images/about_me.jpg' %}" style="width: 400; height: 450px ;" alt="my_photo">
+
+        </div>
+        <div class="col-md-7">
+            <h1>About Me</h1>
+            <p>Hi, My name is <i style="font-size: 2rem; font-family: drama regular; color: #ff4d4d;"> Komal Shivgunde!</i></p>
+            <p> the curious soul behind this eclectic digital corner. In my little space on the internet, I wear many hats - sports enthusiast, health advocate, tech aficionado, and a foodie at heart. </p>
+
+        </div>
+           
+    </div>
+   
+
+{% endblock 'main' %}

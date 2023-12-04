@@ -1,0 +1,46 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'asset\css\bootstrap.min.css' %}"/>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row p-3" >
+            <a href="/home" style="text-decoration: none;" >Back to Home</a>
+            <div class="col-md-4 p-3 shadow mx-auto">
+                <h2 align="center">Login</h2>
+                {% if errmsg %}
+                    <div class="alert alert-danger">
+                        {{errmsg}}
+                    </div>
+                {% endif %}
+                <form method="POST" action="/login">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="Input1" class="form-label"><strong>Username :</strong></label>
+                        <input type="email" name="uname" class="form-control" id="Input1" placeholder="enter username">
+                    </div><!--username-->
+                   
+                    <div class="mb-3">                       
+                        <label for="Input2" class="form-label"><strong>Password :</strong></label>
+                        <input type="password" name="upass" class="form-control" id="Input2" placeholder="enter password">
+                    </div><!--password-->
+                    
+                    <div class="mb-3">
+                        <input type="submit" class="btn btn-primary" value="Login">
+                        Not User?<a href="/register" style="text-decoration: none;" >Register</a>
+                    </div><!--login button and register link-->
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'asset\js\bootstrap.min.js' %}"></script>
+
+    
+</body>
+</html>

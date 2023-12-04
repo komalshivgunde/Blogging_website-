@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'main' %}
+        
+        
+
+        <div class="row mt-5">
+            <!--
+            <div class="col-md-2 bg-body-tertiary">
+                {% for x in categories %}
+                    {% if x.title == 'Food' %}
+                        <a class="anchor" href="/catfilter/{{x.cat_id}}">Food</a>
+                    {% elif x.title == 'Health' %}
+                        <a class="anchor" href="/catfilter/{{x.cat_id}}">Health</a>
+                    {% elif x.title == 'Sports' %}
+                        <a class="anchor" href="/catfilter/{{x.cat_id}}">Sports</a>
+                    {% elif x.title == 'Technology' %}
+                        <a class="anchor" href="/catfilter/{{x.cat_id}}">Technology</a>
+                    {% endif %}
+                {% endfor %}
+            </div>filter div ends-->
+        
+            
+            <div class="col-md-12">
+
+                <div class="row mt-4">
+
+                    {% for x in posts %}
+                    <div class="col-md-6 mt-4">
+                        <img src="{{x.image.url}}" style="width: 100%; height: 220px ;" title="">
+                    </div>
+
+                    <div class="col-md-6 mt-4">
+                        <h2>{{x.title}}</h2>
+                        <p>{{x.content | safe}}</p>
+                        
+                        <a href="/save/{{x.post_id}}" class="btn btn-primary">Save</a>
+                        {% if success %}
+                            <div class="alert alert-success">
+                                {{success}}
+                            </div>
+                        {% endif %}
+                        {% if msg %}
+                            <div class="alert alert-danger">
+                                {{msg}}
+                            </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+
+{% endblock 'main' %}
+        
+        
